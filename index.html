@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RopeSpace | Corde, corpo e cultura contemporanea</title>
+  <meta name="description" content="RopeSpace osserva la cultura delle corde oltre la posa, tra storia, corpo, consenso e responsabilità.">
+  <meta name="theme-color" content="#6e1733">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="RopeSpace | Corde, corpo e cultura contemporanea">
+  <meta property="og:description" content="Uno spazio dedicato alla cultura delle corde, al corpo, al consenso e alle relazioni contemporanee.">
+  <meta property="og:url" content="https://lussoroma.github.io/ropespace/">
+  <meta property="og:image" content="https://www.ropespace.org/wp-content/uploads/2026/09/shibari-storia-corpo-corde-og.jpg">
+  <link rel="canonical" href="https://lussoroma.github.io/ropespace/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1d1618;
+      --paper: #f7f2ec;
+      --card: #fffaf6;
+      --wine: #741b39;
+      --wine-dark: #4c1025;
+      --rose: #ecd5dc;
+      --line: rgba(77, 34, 47, .17);
+      --muted: #685b60;
+      --shadow: 0 24px 70px rgba(59, 23, 35, .13);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 8% 4%, rgba(155, 64, 92, .12), transparent 30rem),
+        var(--paper);
+      color: var(--ink);
+      font-family: "DM Sans", system-ui, sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      color: var(--wine-dark);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .nav-link {
+      font-size: .92rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+    .nav-link:hover { border-color: currentColor; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(360px, .95fr);
+      align-items: center;
+      gap: clamp(34px, 6vw, 86px);
+      padding: clamp(54px, 9vw, 112px) 0 72px;
+    }
+    .eyebrow {
+      margin: 0 0 18px;
+      color: var(--wine);
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    h1, h2, blockquote {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 500;
+      line-height: 1.08;
+    }
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(3rem, 7vw, 6.7rem);
+      letter-spacing: -.045em;
+    }
+    .lead {
+      max-width: 650px;
+      margin: 26px 0 34px;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 1.8vw, 1.3rem);
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      min-height: 50px;
+      padding: 0 24px;
+      border-radius: 999px;
+      background: var(--wine);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 10px 28px rgba(116, 27, 57, .22);
+      transition: transform .2s ease, background .2s ease;
+    }
+    .cta:hover { background: var(--wine-dark); transform: translateY(-2px); }
+    .hero-figure { margin: 0; }
+    .hero-figure img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 32px 32px 120px 32px;
+      box-shadow: var(--shadow);
+    }
+    figcaption {
+      margin: 14px 10px 0;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: .55fr 1.45fr;
+      gap: clamp(32px, 7vw, 110px);
+      padding: 76px 0;
+      border-top: 1px solid var(--line);
+    }
+    .section-label {
+      color: var(--wine);
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .intro-copy p:first-child {
+      margin-top: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.55rem, 3vw, 2.55rem);
+      line-height: 1.35;
+    }
+    .intro-copy p { max-width: 800px; }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      padding: 12px 0 92px;
+    }
+    .card {
+      min-height: 290px;
+      padding: 34px;
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      background: rgba(255, 250, 246, .72);
+    }
+    .number { color: var(--wine); font-size: .75rem; font-weight: 600; letter-spacing: .15em; }
+    .card h2 { margin: 46px 0 16px; font-size: clamp(1.65rem, 2.6vw, 2.25rem); }
+    .card p { margin-bottom: 0; color: var(--muted); }
+
+    .quote-panel {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 60px;
+      align-items: end;
+      margin-bottom: 92px;
+      padding: clamp(34px, 6vw, 72px);
+      border-radius: 34px;
+      background: linear-gradient(135deg, var(--wine-dark), var(--wine));
+      color: white;
+      box-shadow: var(--shadow);
+    }
+    blockquote {
+      margin: 0;
+      font-size: clamp(2rem, 4.5vw, 4.2rem);
+      letter-spacing: -.025em;
+    }
+    .quote-panel p { margin: 0; color: #f2dfe5; }
+
+    .reading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      padding-bottom: 100px;
+    }
+    .reading h2 { margin: 0 0 22px; font-size: clamp(2.2rem, 5vw, 4.8rem); }
+    .reading p { color: var(--muted); }
+    .reading-card {
+      padding: 36px;
+      border-radius: 28px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 50px rgba(59, 23, 35, .08);
+    }
+    .reading-card strong { display: block; margin-bottom: 10px; font-family: "Playfair Display", serif; font-size: 1.55rem; }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      padding: 30px 0 44px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: .86rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero, .intro, .quote-panel, .reading { grid-template-columns: 1fr; }
+      .hero { padding-top: 44px; }
+      .hero-figure { max-width: 700px; }
+      .principles { grid-template-columns: 1fr; }
+      .card { min-height: 0; }
+      .card h2 { margin-top: 28px; }
+      .quote-panel { gap: 30px; }
+    }
+
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 24px, 1180px); }
+      .site-header { padding: 18px 0; }
+      .nav-link { font-size: .82rem; }
+      h1 { font-size: clamp(2.8rem, 15vw, 4.2rem); }
+      .hero { gap: 34px; padding-bottom: 58px; }
+      .hero-figure img { border-radius: 22px 22px 70px 22px; }
+      .intro { padding: 58px 0; }
+      .principles { padding-bottom: 68px; }
+      .card, .reading-card { padding: 26px; border-radius: 22px; }
+      .quote-panel { margin-bottom: 68px; padding: 30px 25px; border-radius: 24px; }
+      .reading { gap: 34px; padding-bottom: 72px; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="site-header">
+      <a class="brand" href="https://www.ropespace.org/">RopeSpace</a>
+      <a class="nav-link" href="#lettura">Leggi l’approfondimento</a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Corpo · cultura · relazione</p>
+          <h1>La corda oltre la posa</h1>
+          <p class="lead">Uno spazio dedicato allo shibari, al linguaggio del corpo e a ciò che un’immagine non riesce a raccontare da sola.</p>
+          <a class="cta" href="https://www.ropespace.org/shibari-cose-storia-kinbaku-sicurezza/">Scopri il percorso</a>
+        </div>
+        <figure class="hero-figure">
+          <img src="https://www.ropespace.org/wp-content/uploads/2026/09/shibari-storia-corpo-corde-og.jpg" alt="Corda naturale disposta su un tessuto bordeaux accanto a un libro aperto e a un oggetto in legno.">
+          <figcaption>La corda come materiale, memoria e relazione. RopeSpace Editorial.</figcaption>
+        </figure>
+      </section>
+
+      <section class="intro">
+        <div class="section-label">Perché RopeSpace</div>
+        <div class="intro-copy">
+          <p>Una fotografia può fermare una forma. Non mostra la conversazione, l’ascolto e le decisioni che l’hanno resa possibile.</p>
+          <p>RopeSpace osserva proprio questa parte meno visibile. La corda non viene trattata come un oggetto isolato, ma come un punto d’incontro tra storia, tecnica, estetica e responsabilità. Guardare oltre la posa significa restituire contesto alle immagini e centralità alle persone.</p>
+        </div>
+      </section>
+
+      <section class="principles" aria-label="Temi principali">
+        <article class="card">
+          <span class="number">01</span>
+          <h2>Storia e lessico</h2>
+          <p>Shibari, kinbaku e rope bondage non sono etichette immobili. Parole, pratiche e significati cambiano con scuole, comunità e contesti.</p>
+        </article>
+        <article class="card">
+          <span class="number">02</span>
+          <h2>Il corpo viene prima</h2>
+          <p>La precisione di una figura non basta. Un corpo respira, comunica, cambia posizione e conserva sempre la possibilità di fermarsi.</p>
+        </article>
+        <article class="card">
+          <span class="number">03</span>
+          <h2>Consenso continuo</h2>
+          <p>Il consenso non è una formalità iniziale. Riguarda intensità, limiti, immagini, pubblicazione e libertà di cambiare direzione.</p>
+        </article>
+      </section>
+
+      <section class="quote-panel">
+        <blockquote>La forma è soltanto una parte.</blockquote>
+        <p>Ciò che conta spesso resta fuori dall’inquadratura: il contesto, le domande, gli aggiustamenti e il modo in cui le persone si ascoltano.</p>
+      </section>
+
+      <section class="reading" id="lettura">
+        <div>
+          <p class="eyebrow">Una lettura completa</p>
+          <h2>Shibari oltre la posa</h2>
+          <p>Un percorso attraverso storia, lessico, cultura visiva, sicurezza e consenso, pensato per chi vuole comprendere la corda oltre l’immagine finale.</p>
+        </div>
+        <div class="reading-card">
+          <strong>Shibari, storia, corpo e sicurezza</strong>
+          <p>L’approfondimento riunisce i temi essenziali in una lettura ampia, accessibile e documentata.</p>
+          <a class="cta" href="https://www.ropespace.org/shibari-cose-storia-kinbaku-sicurezza/">Leggi su RopeSpace</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>RopeSpace · Cultura delle corde e relazioni contemporanee</span>
+      <a href="https://www.ropespace.org/">www.ropespace.org</a>
+    </footer>
+  </div>
+</body>
+</html>
